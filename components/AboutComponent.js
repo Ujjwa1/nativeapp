@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Loading } from './LoadingComponent';
 import { ScrollView, Text, FlatList } from 'react-native';
 import { Card, ListItem } from 'react-native-elements';
 import { connect } from 'react-redux';
@@ -32,6 +33,36 @@ const mapStateToProps = state => {
             );
         };
 
+        if (this.props.leaders.isLoading) {
+            return(
+                <ScrollView>
+                    <History />
+                    <Card
+                        title='Our History'>
+                        <Loading />
+                    </Card>
+                    <Card
+                        title='Corporate Leadership'>
+                        <Loading />
+                    </Card>                    
+                </ScrollView>
+            );
+        }
+        else if (this.props.leaders.errMess) {
+            return(
+                <ScrollView>
+                   <Card
+                        title='Our History'>
+                        <Text>{this.props.leaders.errMess}</Text>
+                    </Card> 
+                    <Card
+                        title='Corporate Leadership'>
+                        <Text>{this.props.leaders.errMess}</Text>
+                    </Card>
+                </ScrollView>
+            );
+        }
+        else{
         return(
             <ScrollView>
                 <Card title='Our History'>
@@ -54,6 +85,7 @@ const mapStateToProps = state => {
             </ScrollView>
         );
     }
+};
 }
 
  export default connect(mapStateToProps)(About);
