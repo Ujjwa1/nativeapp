@@ -10,7 +10,7 @@ import { Card } from 'react-native-elements';
 
      render() {
         return(
-            <View>
+            <Animatable.View animation="fadeInDown" duration={2000} delay={200}>
                 <Card title='Contact Information'>
                     <Text style={{margin: 10}}>121, Clear Water Bay Road</Text>
                     <Text style={{margin: 10}}>Clear Water Bay, Kowloon</Text>
@@ -19,7 +19,7 @@ import { Card } from 'react-native-elements';
                     <Text style={{margin: 10}}>Fax: +852 8765 4321</Text>
                     <Text style={{margin: 10}}>Email:confusion@food.net</Text>     
                 </Card>
-            </View>
+            </Animatable.View>
         );
     }
 }

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Loading } from './LoadingComponent';
 import { Text, ScrollView, View } from 'react-native';
+import * as Animatable from 'react-native-animatable';
 import { Card } from 'react-native-elements';
 import { connect } from 'react-redux';
 import { baseUrl } from '../shared/baseUrl';
@@ -60,6 +61,7 @@ class Home extends Component {
     render() {
         
         return(
+            <Animatable.View animation="fadeInDown" duration={2000} delay={200}>
             <ScrollView>
                 <RenderItem item={this.props.dishes.dishes.filter((dish) => dish.featured)[0]}
                 isLoading={this.props.dishes.isLoading}
@@ -71,6 +73,7 @@ class Home extends Component {
                 isLoading={this.props.leaders.isLoading}
                 errMess={this.props.leaders.errMess} />
             </ScrollView>
+            </Animatable.View>
         );
     }
 }
