@@ -30,7 +30,6 @@ class Menu extends Component {
                     <Tile
                         key={index}
                         title={item.name}
-                        caption={item.description}
                         featured
                         onPress={() => navigate('Dishdetail', {dishId: item.id})}
                         imageSrc={{uri: baseUrl+item.image}}
