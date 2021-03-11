@@ -55,7 +55,7 @@ class Home extends Component {
 
 
     static navigationOptions = {
-        title: 'Home',
+        title: 'Ristorante Con Fusion',
     };
 
     render() {

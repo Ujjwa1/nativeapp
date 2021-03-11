@@ -1,5 +1,5 @@
 Arguments: 
-  C:\Program Files\nodejs\node.exe C:\Program Files\Yarn\bin\yarn.js add react-native-animatable
+  C:\Program Files\nodejs\node.exe C:\Program Files\Yarn\bin\yarn.js add expo-secure-store
 
 PATH: 
   C:\WINDOWS\system32;C:\WINDOWS\system32\wbem;C:\WINDOWS\system32\WindowsPowershell\v1.0;C:\MinGW\bin;C:\Program Files\PuTTY\;C:\Program Files\Git\cmd;C:\Program Files\Yarn\bin\;C:\Users\HP\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Program Files\nodejs\;C:\Users\HP\AppData\Local\Programs\Python\Python37-32\Scripts\;C:\Users\HP\AppData\Local\Programs\Python\Python37-32\;C:\Users\HP\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\HP\AppData\Local\Yarn\bin;C:\Users\HP\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Users\HP\AppData\Roaming\npm
@@ -14,7 +14,7 @@ Platform:
   win32 ia32
 
 Trace: 
-  Error: EPERM: operation not permitted, unlink 'D:\reactnative\my-app\node_modules\@babel\helper-define-polyfill-provider\node_modules\.bin'
+  Error: EPERM: operation not permitted, unlink 'D:\reactnative\my-app\node_modules\@babel\generator\node_modules\.bin'
 
 npm manifest: 
   {
@@ -35,6 +35,7 @@ npm manifest:
       "react": "16.13.1",
       "react-dom": "16.13.1",
       "react-native": "https://github.com/expo/react-native/archive/sdk-40.0.1.tar.gz",
+      "react-native-animatable": "1.2.4",
       "react-native-datepicker": "1.7.2",
       "react-native-elements": "^1.0.0-beta8",
       "react-native-gesture-handler": "~1.8.0",
@@ -3639,7 +3640,7 @@ Lockfile:
       strip-ansi "^4.0.0"
       through "^2.3.6"
   
-  invariant@^2.0.0, invariant@^2.2.2, invariant@^2.2.4:
+  invariant@^2.2.2, invariant@^2.2.4:
     version "2.2.4"
     resolved "https://registry.yarnpkg.com/invariant/-/invariant-2.2.4.tgz#610f3c92c9359ce1db616e538008d23ff35158e6"
     integrity sha512-phJfQVBuaJM5raOpJjSfkiD6BpbCE4Ns//LaXl6wGYtUBY83nWS6Rf9tXm2e8VaK60JEjYldbPif/A2B1C2gNA==
@@ -4202,11 +4203,6 @@ Lockfile:
     dependencies:
       p-locate "^5.0.0"
   
-  lodash-es@^4.17.5:
-    version "4.17.20"
-    resolved "https://registry.yarnpkg.com/lodash-es/-/lodash-es-4.17.20.tgz#29f6332eefc60e849f869c264bc71126ad61e8f7"
-    integrity sha512-JD1COMZsq8maT6mnuz1UMV0jvYD0E0aUsSOdrr1/nAG3dhqQXwRRgeW0cSqH1U43INKcqxaiVIQNOUDld7gRDA==
-  
   lodash._reinterpolate@^3.0.0:
     version "3.0.0"
     resolved "https://registry.yarnpkg.com/lodash._reinterpolate/-/lodash._reinterpolate-3.0.0.tgz#0ccf2d89166af03b3663c796538b75ac6e114d9d"
@@ -4262,7 +4258,7 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/lodash.throttle/-/lodash.throttle-4.1.1.tgz#c23e91b710242ac70c37f1e1cda9274cc39bf2f4"
     integrity sha1-wj6RtxAkKscMN/HhzaknTMOb8vQ=
   
-  lodash@^4.17.13, lodash@^4.17.14, lodash@^4.17.15, lodash@^4.17.19, lodash@^4.17.4, lodash@^4.17.5, lodash@^4.3.0, lodash@^4.5.0, lodash@^4.6.0:
+  lodash@^4.17.13, lodash@^4.17.14, lodash@^4.17.15, lodash@^4.17.19, lodash@^4.17.4, lodash@^4.3.0, lodash@^4.5.0, lodash@^4.6.0:
     version "4.17.20"
     resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.20.tgz#b44a9b6297bcb698f1c51a3545a2b3b368d59c52"
     integrity sha512-PlhdFcillOINfeV7Ni6oF1TAEayyZBoZ8bcshTHqOYJYlrqzRK5hagpagky5o4HfCzzd1TRkXPMFq6cKk9rGmA==
@@ -5309,7 +5305,7 @@ Lockfile:
     dependencies:
       asap "~2.0.6"
   
-  prop-types@^15.5.10, prop-types@^15.5.8, prop-types@^15.6.0, prop-types@^15.6.2, prop-types@^15.7.2:
+  prop-types@^15.5.10, prop-types@^15.5.8, prop-types@^15.6.0, prop-types@^15.6.1, prop-types@^15.6.2, prop-types@^15.7.2:
     version "15.7.2"
     resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.7.2.tgz#52c41e75b8c87e72b9d9360e0206b99dcbffa6c5"
     integrity sha512-8QQikdH7//R2vurIJSutZ1smHYTcLpRWEOlHnzcWHmBYrOGUysKwSsrC89BCiFj3CbrfJ/nXFdJepOVrY1GCHQ==
@@ -5371,7 +5367,7 @@ Lockfile:
       prop-types "^15.6.2"
       scheduler "^0.19.1"
   
-  react-is@^16.12.0, react-is@^16.7.0, react-is@^16.8.1, react-is@^16.8.4:
+  react-is@^16.12.0, react-is@^16.6.0, react-is@^16.7.0, react-is@^16.8.1, react-is@^16.8.4:
     version "16.13.1"
     resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
     integrity sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
@@ -5386,10 +5382,17 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/react-lifecycles-compat/-/react-lifecycles-compat-1.1.4.tgz#fc005c72849b7ed364de20a0f64ff58ebdc2009a"
     integrity sha512-g3pdexIqkn+CVvSpYIoyON8zUbF9kgfhp672gyz7wQ7PQyXVmJtah+GDYqpHpOrdwex3F77iv+alq79iux9HZw==
   
-  react-lifecycles-compat@^3:
+  react-lifecycles-compat@^3, react-lifecycles-compat@^3.0.0:
     version "3.0.4"
     resolved "https://registry.yarnpkg.com/react-lifecycles-compat/-/react-lifecycles-compat-3.0.4.tgz#4f1a273afdfc8f3488a8c516bfda78f872352362"
     integrity sha512-fBASbA6LnOU9dOU2eW7aQ8xmYBSXUIWr+UmF9b1efZBazGNO+rcXT/icdKnYm2pTwcRylVUYwW7H1PHfLekVzA==
+  
+  react-native-animatable@1.2.4:
+    version "1.2.4"
+    resolved "https://registry.yarnpkg.com/react-native-animatable/-/react-native-animatable-1.2.4.tgz#b5fb7657e8f6edadbc26697057a327fb920b3039"
+    integrity sha512-cVTQXa/cp8gfxcl+l6I1rGAI7EeoNZ0ur9vtxb3tD5iGlJbIyUfQK61e6BycnZewdgQ639Mp6OrueXTpZlv76Q==
+    dependencies:
+      prop-types "^15.5.10"
   
   react-native-datepicker@1.7.2:
     version "1.7.2"
@@ -5569,17 +5572,18 @@ Lockfile:
       react-navigation-deprecated-tab-navigator "1.2.0"
       react-navigation-tabs "0.2.0"
   
-  react-redux@5.0.7:
-    version "5.0.7"
-    resolved "https://registry.yarnpkg.com/react-redux/-/react-redux-5.0.7.tgz#0dc1076d9afb4670f993ffaef44b8f8c1155a4c8"
-    integrity sha512-5VI8EV5hdgNgyjfmWzBbdrqUkrVRKlyTKk1sGH3jzM2M2Mhj/seQgPXaz6gVAj2lz/nz688AdTqMO18Lr24Zhg==
+  react-redux@^5.0.7:
+    version "5.1.2"
+    resolved "https://registry.yarnpkg.com/react-redux/-/react-redux-5.1.2.tgz#b19cf9e21d694422727bf798e934a916c4080f57"
+    integrity sha512-Ns1G0XXc8hDyH/OcBHOxNgQx9ayH3SPxBnFCOidGKSle8pKihysQw2rG/PmciUQRoclhVBO8HMhiRmGXnDja9Q==
     dependencies:
-      hoist-non-react-statics "^2.5.0"
-      invariant "^2.0.0"
-      lodash "^4.17.5"
-      lodash-es "^4.17.5"
+      "@babel/runtime" "^7.1.2"
+      hoist-non-react-statics "^3.3.0"
+      invariant "^2.2.4"
       loose-envify "^1.1.0"
-      prop-types "^15.6.0"
+      prop-types "^15.6.1"
+      react-is "^16.6.0"
+      react-lifecycles-compat "^3.0.0"
   
   react-refresh@^0.4.0:
     version "0.4.3"
