@@ -1,5 +1,5 @@
 Arguments: 
-  C:\Program Files\nodejs\node.exe C:\Program Files\Yarn\bin\yarn.js add react-native-safe-area-view
+  C:\Program Files\nodejs\node.exe C:\Program Files\Yarn\bin\yarn.js add expo-mailcomposer
 
 PATH: 
   C:\WINDOWS\system32;C:\WINDOWS\system32\wbem;C:\WINDOWS\system32\WindowsPowershell\v1.0;C:\MinGW\bin;C:\Program Files\PuTTY\;C:\Program Files\Git\cmd;C:\Program Files\Yarn\bin\;C:\Users\HP\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Program Files\nodejs\;C:\Users\HP\AppData\Local\Programs\Python\Python37-32\Scripts\;C:\Users\HP\AppData\Local\Programs\Python\Python37-32\;C:\Users\HP\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\HP\AppData\Local\Yarn\bin;C:\Users\HP\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Users\HP\AppData\Roaming\npm
@@ -14,7 +14,17 @@ Platform:
   win32 ia32
 
 Trace: 
-  Error: EPERM: operation not permitted, unlink 'D:\reactnative\my-app\node_modules\@babel\generator\node_modules\.bin'
+  Error: https://registry.yarnpkg.com/expo-mailcomposer: Not found
+      at Request.params.callback [as _callback] (C:\Program Files\Yarn\lib\cli.js:66097:18)
+      at Request.self.callback (C:\Program Files\Yarn\lib\cli.js:140749:22)
+      at Request.emit (events.js:314:20)
+      at Request.<anonymous> (C:\Program Files\Yarn\lib\cli.js:141721:10)
+      at Request.emit (events.js:314:20)
+      at IncomingMessage.<anonymous> (C:\Program Files\Yarn\lib\cli.js:141643:12)
+      at Object.onceWrapper (events.js:420:28)
+      at IncomingMessage.emit (events.js:326:22)
+      at endReadableNT (_stream_readable.js:1241:12)
+      at processTicksAndRejections (internal/process/task_queues.js:84:21)
 
 npm manifest: 
   {
@@ -35,6 +45,7 @@ npm manifest:
       "expo-permissions": "~10.0.0",
       "expo-secure-store": "~9.3.0",
       "expo-status-bar": "~1.0.3",
+      "moment": "^2.29.1",
       "react": "16.13.1",
       "react-dom": "16.13.1",
       "react-native": "https://github.com/expo/react-native/archive/sdk-40.0.1.tar.gz",
@@ -4811,7 +4822,7 @@ Lockfile:
     dependencies:
       minimist "^1.2.5"
   
-  moment@^2.22.0:
+  moment@^2.22.0, moment@^2.29.1:
     version "2.29.1"
     resolved "https://registry.yarnpkg.com/moment/-/moment-2.29.1.tgz#b2be769fa31940be9eeea6469c075e35006fa3d3"
     integrity sha512-kHmoybcPV8Sqy59DwNDY3Jefr64lK/by/da0ViFcuA4DH0vQg5Q6Ze5VimxkfQNSC+Mls/Kx53s7TjP1RhFEDQ==

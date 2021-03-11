@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import {Text,View,ScrollView,StyleSheet,Switch,Button,Modal,Alert} from "react-native";
+import {Icon} from 'react-native-elements';
 import * as Animatable from 'react-native-animatable';
 import { Picker } from '@react-native-picker/picker';
 import DateTimePicker from "@react-native-community/datetimepicker";
@@ -124,14 +125,16 @@ class Reservation extends Component {
         </View>
         <View style={styles.formRow}>
           <Text style={styles.formLabel}>Date and Time</Text>
+          <Icon type='font-awesome' name='calendar' color='#512DA8' />
           <Text style={styles.formItem} onPress={showDatepicker}>
             {this.state.date.toDateString()} {this.state.time.toTimeString()}
           </Text>
           {this.state.show && (
             <DateTimePicker
+              style={{flex: 2, marginRight: 20}}
               value={this.state.date}
               mode={this.state.mode}
-              display="default"
+              placeholder="Select Date And Time"
               minimumDate={new Date()}
               onChange={(selected, value) => {
                 if (value !== undefined) {
